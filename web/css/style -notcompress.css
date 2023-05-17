@@ -1,0 +1,2097 @@
+/* --- GRID --*/
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+  
+  .container {
+      width: 960px;
+      margin: 0 auto;
+      padding: 0px;
+      position: relative;
+  }
+  
+  .container:after, .container:before {
+      content: " ";
+      display: table;
+  }
+  
+  .container:after {
+      clear: both;
+  }
+  
+  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  
+  .grid-1 	{width: 40px;}
+  .grid-2 	{width: 100px;}
+  .grid-3 	{width: 160px;}
+  .grid-4 	{width: 220px;}
+  .grid-5 	{width: 280px;}
+  .grid-6 	{width: 340px;}
+  .grid-7 	{width: 400px;}
+  .grid-8 	{width: 460px;}
+  .grid-9 	{width: 520px;}
+  .grid-10 	{width: 580px;}
+  .grid-11 	{width: 640px;}
+  .grid-12 	{width: 700px;}
+  .grid-13 	{width: 760px;}
+  .grid-14 	{width: 820px;}
+  .grid-15 	{width: 880px;}
+  .grid-16 	{width: 940px;}
+  .grid-1-3	{width: 300px;}
+  
+  @media only screen and (min-width: 788px) and (max-width: 979px) {
+  
+      .container {
+          width: 768px;
+    
+      }
+      
+      .grid-1		{width: 28px;}
+      .grid-2		{width: 76px;}
+      .grid-3		{width: 124px;}
+      .grid-4		{width: 172px;}
+      .grid-5		{width: 220px;}
+      .grid-6		{width: 268px;}
+      .grid-7		{width: 316px;}
+      .grid-8		{width: 364px;}
+      .grid-9		{width: 412px;}
+      .grid-10	{width: 460px;}
+      .grid-11	{width: 508px;}
+      .grid-12	{width: 556px;}
+      .grid-13	{width: 604px;}
+      .grid-14	{width: 652px;}
+      .grid-15	{width: 700px;}
+      .grid-16	{width: 748px;}
+      .grid-1-3	{width: 236px;}
+      
+      }
+      
+      @media only screen and (max-width: 787px) {
+      .container {
+          width: 300px;
+      }
+      
+      .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+          width: 300px;
+          margin-bottom: 20px;
+          float: none;
+      }
+      
+      }
+  
+
+/*  ---- NORMALIZE ---- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+  details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+
+
+/* ----- RESET ----- */
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+/**
+ * Remove anchor text-decoration
+ */ 
+
+ a {
+	text-decoration: none;
+}
+
+/**
+ * Remove list-style
+ */ 
+
+ol, ul {
+	list-style: none;
+}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/*ESTILOS GERAIS*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+h1:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 10px auto;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+
+.btn-branco {
+    border: 3px solid white;
+    padding: 10px 30px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-branco:hover {
+    color: #08aae3;
+    border: #08aae3 3px solid;
+}
+
+.btn-preto {
+    border: 3px solid black;
+    padding: 10px 30px 10px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.btn-preto:hover {
+    color: #08aae3;
+    border: #08aae3 3px solid;
+}
+
+.call {
+    padding-top: 70px;
+    text-align: center;
+    clear: both;
+}
+
+.quebra {
+    background: url("../img/bg-quote.png") no-repeat center;
+    width: 100%;
+    height: 210px;
+}
+
+.quote p {
+    color: #ffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: .1em;
+    padding: 10px;
+}
+
+.quote p:after, .quote p:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 20px auto;
+}
+
+.quote cite {
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0  auto;
+}
+
+.titulo-interno {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 70px;
+    height: 172;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.titulo-interno h1{
+    padding-bottom: 50px;
+}
+
+.subtitulo-interno {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: 30px;
+}
+
+.subtitulo-interno:after, .subtitulo-interno:before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: black;
+    margin: 20px auto;
+}
+
+.play {
+    color: black;
+    background: white;
+    border: solid black 8px;
+    border-radius: 60px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    padding: 32px 18px 32px 18px;
+    margin-top: -260px;
+    margin-left: 420px;
+}
+
+.play h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: .1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.play:hover {
+    color: #0277a1;
+    border: solid #0277a1 8px;
+}
+
+
+/*  HOME - HEADER */
+.header{
+    background:url("../img/bg-menu.png") no-repeat center ;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 2;
+}
+.header_menu {
+    text-align: right;
+}
+
+.header_menu ul li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.header_menu ul li a {
+    color:#ffff;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+.header_menu ul li a:hover {
+    color: #08aae3;
+}
+
+.header_menu ul li a.menu_ativo {
+    color: #08aae3;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 60px;
+    height: 895px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.introducao h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 48px;
+    color: #ffff;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-shadow: black 10px 1px 10px ;
+}
+
+.introducao h1:after {
+    opacity: 0;
+}
+
+.introducao h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffff;
+    letter-spacing: .2em;  
+    text-shadow: black 1px 1px 2px; 
+}
+
+
+.casa {
+    margin: 30px auto;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.casa img { 
+    margin: 0px auto;
+    width: 422px;
+    height: 377px;
+  
+}
+
+.introducao .quote cite {
+    margin:0px auto;
+}
+
+/*  HOME - CAST */
+
+.cast-home {
+    width: 100%;
+    background: url("../img/bg-preto.jpg") no-repeat center;
+    background-size: cover;
+    height: 986px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.cast-home ul {
+    padding-top: 60px;
+    margin-left: 110px;
+}
+
+.foto1{
+    background: white;
+    padding: 0 0 25px 0;
+}
+
+.foto2{
+    background: white;
+    padding: 0 0 21px 0;
+}
+
+.cast-home ul li p {
+    color: black;
+    padding: 10px;
+}
+
+
+.cast-home h3 {
+    color: black;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.cast-home h3:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    margin: 10px auto;
+}
+
+
+.call p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.call a {
+    letter-spacing: .2em;
+    font-weight: bolder;
+}
+.cast-home .call {
+    padding-top: 120px
+}
+
+/*  HOME - history */
+
+.history-home {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    height: 860px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.seta img{
+    display:block;
+    position: absolute;
+    margin: 360px auto;
+    margin-left: 40px;
+}
+
+
+.seta img:hover {
+    border: #08aae3 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.history-home ul {
+    padding-top: 60px;
+}
+
+.history-home ul li p {
+    color: white;
+    text-align: justify;
+    text-indent: 0px;
+    line-height: 30px;
+    padding: 20px;
+}
+
+.history-home ul li p:hover {
+    background: black;
+    border-radius: 10px;
+}
+
+.history-home ul li h3 {
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: .2em;
+    padding: 20px;
+}
+
+/*  HOME - game */
+
+.game-home {
+    width: 100%;
+    background: url("../img/bg-preto.jpg") no-repeat center;
+    background-size: cover;
+    height: 1060px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.game-home ul {
+    padding-top: 80px;
+}
+
+.capa { 
+    margin-bottom: 36px;
+}
+
+
+/*  HOME - production */
+
+.production-home {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    height: 1060px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.production-home .btn-branco {
+    padding: 10px;
+}
+
+.production-home ul {
+    padding-top: 50px;
+}
+
+.production-home ul li {
+    padding-bottom: 30px;
+}
+
+.columbia img{
+    background: #7FC0E4;
+    margin-left: 2px;
+    padding: 40px 100px 40px 100px;
+}
+
+.production-home .call {
+    padding-top: 50px;
+}
+
+.quote cite {
+    text-align: center;
+    margin-left: 700px;
+}
+
+/*footer*/
+
+.footer {
+    padding-bottom: 30px;
+}
+
+
+.footer h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0 20px 0;
+}
+
+.footer h3:after  {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    margin-top: 10px;
+}
+
+.footer_contato ul li{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.media ul li {
+    display: inline-block;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.media ul li a {
+    border: solid black 3px;
+    display: block;
+    padding: 5px;
+}
+
+.media ul li a:hover {
+    border: solid #08aae3 3px;
+}
+
+.copy {
+    width: 100%;
+    background: url("../img/bg-preto.jpg") no-repeat center;
+    background-size: cover;
+    height: 60px;
+}
+
+.copy p{
+    color: white;
+    padding-top: 20px;
+}
+
+
+/*  ---- ABOUT  ---- */
+
+.meteoros img {
+    display:block;
+    position: absolute;
+    margin-right: 600px;
+    margin-left: 300px;
+    margin-top: -200px;
+    clear: both;
+}
+
+.about {
+    padding-bottom: 80px;
+}
+
+.about h1{
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.about h1:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    margin-top: 20px;
+}
+
+.about p {
+    text-indent: 20px;
+    line-height: 30px;
+    text-align: justify;
+    padding: 0 100px 30px 100px;
+
+}
+
+.livro {
+   clear: both;
+}
+
+.texto {
+    margin-top: 50px;
+}
+
+.about img {
+    margin-left: 100px;
+}
+
+.quebra-cenas img{
+    margin-bottom: 20px;
+}
+
+.box-office {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+.box-office h1 {
+    color: black;
+    font-weight: bold;
+    margin-top: 30px
+}
+
+.box-office h1:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    margin-top: 20px;
+}
+
+.box-office p {
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.text {
+    margin-top: 50px;
+}
+
+.reviews {
+    width: 100%;
+    background: url("../img/bg-preto.jpg") no-repeat center;
+    background-size: cover;
+    height: 830px;
+    margin-bottom: 30px;
+}
+
+.reviews h1 {
+    margin-top: 60px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.reviews p {
+    color:white;
+    margin: 10px auto;
+    line-height: 30px;
+    text-indent: 30px;
+    margin-left: 100px;
+    text-align: justify;
+}
+
+.reviews p:hover {
+    background: white;
+    border-radius: 10px;
+    color: black;
+    padding: 20px;
+}
+
+.making-off .imagens {
+    margin: 20px auto;
+    margin-left: 50px;
+}
+
+.making-off img {
+    padding-top: 20px;
+}
+
+.making-off {
+    margin-bottom: 50px;
+}
+
+.making-off h1 {
+    color: black;
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.making-off h1:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    margin-top: 20px;
+}
+
+.making-off .call {
+    padding: 20px 0 20px 0;
+    margin-top: 50px;
+}
+
+.making-off .call p{
+    color: black;
+}
+
+/* ---- CAST -----*/
+
+.cast h2 {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+
+.personagens {
+    margin-left: 120px;
+}
+
+.setas {
+    padding-top: 200px;
+    margin-left: 120px;
+}
+
+.cast {
+    padding-bottom: 50px;
+}
+
+.others {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    height: 676px;
+}
+
+.others h1 {
+    padding-top: 70px;
+    margin-bottom: 80px;
+}
+
+.others ul li {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: .1em;
+}
+
+.others span {
+    padding: 10px;
+}
+
+.others span:hover {
+    background: #ffff;
+    border-radius: 10px;
+    color: black;
+}
+
+.cast .call p {
+    color: black;
+}
+
+.cast .call {
+    padding: 40px 0 20px 0;
+}
+
+/* ----- HISTORY ------*/
+
+.synopsis p{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0px 80px 100px 80px;
+}
+
+.plot {
+    width: 100%;
+    background: url("../img/bg-preto.jpg") no-repeat center;
+    background-size: cover;
+    height: 1730px;
+    margin-bottom: 30px;
+}
+
+.plot .subtitulo-interno {
+    color: white;
+    margin-top: 20px;
+}
+
+.plot .subtitulo-interno:after, .plot .subtitulo-interno:before{
+    background: white;
+}
+
+.plot p {
+    color: white;
+    line-height: 30px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 50px;
+
+}
+
+.plot p:hover {
+    background: white;
+    color: black;
+    border-radius: 20px;
+}
+
+.trailer .subtitulo-interno {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.trailer img {
+     margin: 10px auto;
+}
+
+.trailer {
+    padding-bottom: 100px;
+} 
+
+.prime-video {
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.prime {
+    margin-left: 50px;
+}
+
+.linha {
+    display: block;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 60px;
+    padding: 20px;
+}
+
+.watch {
+    padding-bottom: 180px;
+  
+}
+
+.watch h1 {
+    padding-bottom: 30px;
+}
+
+.quebra-linha {
+    padding-bottom: 30px;
+}
+
+.prime-video h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    letter-spacing: .1em;
+    text-align: center;
+    color: white;
+    background: #08aae3;
+    padding: 40px 20px 60px 24px;
+    border-radius: 10px;
+    line-height: 30px;
+}
+
+
+.prime-video h3:before {
+    content: "";
+    background: url("../img/seta-prime.png") no-repeat center;
+    width: 98px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+}
+
+.prime-video h3:hover {
+    color: white;
+    background: #7FC0E4;
+    border: #002446 solid 3px;
+    padding: 40px 20px 60px 24px;
+}
+
+.game .call p {
+    color: black;
+}
+
+.game img {
+    margin: 8px auto;
+}
+
+
+.game .call {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+
+.rules {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    height: 752px;
+}
+
+.rules h1:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 10px auto;
+}
+
+.rules ul li {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.img2 {
+    padding-top: 20px;
+}
+
+.rules h1 {
+    padding: 100px 0 60px 0;
+}
+
+.rules ul, .img {
+    padding-top: 50px;
+}
+
+.review {
+    margin-bottom: 100px;
+}
+
+.review img {
+    margin: 0 auto;
+}
+
+.playstation {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    height: 978px;
+}
+
+.playstation h1:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 10px auto;
+}
+
+.playstation img {
+    padding: 9px;
+}
+
+.playstation h1 {
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.game-description {
+    padding: 100px 0px 30px 180px;
+}
+
+.game-description h2 {
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: .1em;
+    margin-left: 160px;
+}
+
+.game-description h2:after {
+    content: "";
+    background: black;
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+}
+
+.game-description p {
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 50px;
+}
+
+.game-description .span {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}   
+
+.texto {
+    margin-bottom: 80px;
+}
+
+.gameplay h1 {
+    padding-top: 0px;
+    margin-top: -80px;
+}
+
+.gameplay img {
+    margin: 0 auto;
+}
+
+.gameplay .play {
+    margin-top: -320px
+}
+
+.gameplay {
+    margin-bottom: 60px;
+}
+
+.top-linha {
+    margin-top: 240px;
+}
+
+.subtitulo {
+    color: black;
+    padding-bottom: 30px;
+    margin-top: -100px;
+}
+
+.production h1:after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: black;
+    display: block;
+    margin: 10px auto;
+}
+
+.conteudo p {
+    line-height: 30px;
+    font-size: 20px;
+    padding: 30px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.conteudo {
+    margin-top: 50px;
+}
+
+.soundtrack img {
+    margin: 0 auto;
+}
+
+.nota {
+    padding-left: 260px;
+}
+
+.soundtrack span {
+    color: black;
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 18px;
+    margin: 10px 0px 0px 742px;
+
+}
+
+.soundtrack span:hover {
+    color: #08aae3;
+}
+
+.production {
+    padding-bottom: 80px;
+}
+
+.script {
+    width: 100%;
+    background: url("../img/bg-azul.jpg") no-repeat center;
+    background-size: cover;
+    height: 1830px;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.script .subtitulo-interno {
+    color: white;
+    padding-bottom: 70px;
+}
+
+.script .subtitulo-interno:after, .script .subtitulo-interno:before {
+    background: white;
+}
+
+.box {
+    width: 360px;
+    height: 360px;
+    border: 3px solid white;
+    background: black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 8px auto 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.box img {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 300px;
+    height: 300px;
+    transition: .5s ease-in-out;
+}
+
+.box:hover img {
+    width: 70px;
+    height: 73px;
+    top: 20px;
+    left: 260px;
+}
+
+.box .content {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: .5s ease-in-out;
+    padding: 120px 20px;
+}
+
+.box:hover .content {
+    transform: translateX(100%);
+}
+
+.box p {
+    color: white;
+    line-height: 25px;
+}
+
+.direct-linha {
+    padding-bottom: 100px;
+}
+
+.camera {
+    padding: 20px 0px 0px 600px;
+}
+
+.direcao {
+    margin: 60px 0px 100px 230px;
+}
+
+.diretor {
+    padding-left: 50px;
+}
+
+.textinho h2 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.direcao .textinho p {
+    line-height: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.direcao .call {
+    padding-top: 30px;
+}
+/* ----- RESPONSIVO ---- */
+/* tablet */
+
+@media only screen and (min-width: 788px) and (max-width: 979px) {
+
+	.media ul li a {
+		border: solid black 3px;
+		display: block;
+		padding: 3px;
+	}
+
+	.play {
+		margin-left: 330px;
+	}
+
+	/* about*/
+	.meteoros img {
+		margin-right: 300px;
+		margin-left: 100px;
+	}
+
+	.about {
+		padding-bottom: 0px;
+	}
+
+	.casa {
+		margin: 30px auto;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.quebra cite {
+		margin-left: 400px;
+	}
+
+
+	/* Cast */
+
+	.personagens {
+		margin-left: 50px;
+	}
+
+	/* History */
+
+	.prime {
+		margin-left: 150px;
+	}
+
+	.prime-video h3:before {
+		background: url("../img/seta-menor.png") no-repeat center;
+		width: 74px;
+		height: 29px;
+	}
+
+	.watch {
+		padding-bottom: 120px;
+	}
+
+	.linha {
+		margin-left: 40px;
+	}
+
+	/* Game */
+	.game img {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.rules {
+		height: 700px;
+	}
+
+	.rules h1 {
+		padding: 30px 0 30px 0;
+	}
+
+	.playstation {
+		height: 830px;
+	}
+
+	.game-description {
+		padding: 30px;
+	}
+	
+	.game-description h2{
+		margin-left: 160px;
+	}
+
+	.texto {
+		padding-left: 80px;
+	}
+
+
+	/* Production */
+
+	.soundtrack span {
+		margin: 0px 0px 10px 550px;
+	}
+
+	.conteudo img {
+		padding: 20px;
+		margin-left: 50px;
+	}
+		
+	.direct-linha {
+		padding-bottom: 50px;
+	}
+	
+	.camera {
+		padding: 20px 0px 0px 400px
+	}
+	
+	.direcao {
+		margin: 10px 0px 50px 150px;
+	}
+	
+}
+
+
+/* celular */
+
+  @media only screen and (max-width: 787px) {
+
+    .header {
+        position: relative;
+    }
+
+    .header img {
+        margin: 0 auto;
+    }
+
+	.header_menu ul li a {
+		color:#ffff;
+		border: solid 3px white;
+		width: 140px;
+		float: right;
+		padding-left: 0px;
+	}
+
+	.impar {
+		margin-right: 80px;
+	}
+
+	.header_menu ul li {
+		margin-left: 0px;
+	}
+
+	.header_menu ul li a:hover {
+		border: solid 3px #08aae3;
+  	}
+
+	  .header_menu ul li a.menu_ativo {
+		border: solid 3px #08aae3;
+	}
+
+	.introducao {
+		margin-top: 0px;
+	}
+ 
+	.casa {
+		margin: 30px auto;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.cast-home {
+		padding-top: 30px;
+	}
+
+	.cast-home {
+		height: 1200px;
+	}
+
+	.cast-home ul {
+		padding-top: 30px;
+		margin: 0 auto;
+	}
+
+	.cast-home ul li{
+		width: 300px;
+	}
+
+	.cast-home .call {
+		padding-top: 50px;
+	}
+
+
+	.history-home {
+		height: 1080px;
+	}
+
+	.history-home ul {
+		padding-top: 20px;
+	}
+
+	.seta img {
+		margin: 0 5px auto;
+	}
+
+	.game-home {
+		height: 1110px;
+		padding-top: 50px;
+	} 
+
+	.game-home ul {
+		padding-top: 40px;
+	}
+	.capa { 
+		margin-bottom: 20px;
+	}
+
+	.call {
+		padding-top: 20px;
+	}
+
+	.columbia img {
+		padding: 20px 50px 20px 50px;
+	}
+
+	.quebra cite {
+		margin: 0 auto;
+	}
+
+	.play {
+		margin-left: 100px;
+		margin-top: -150px;
+		padding: 22px 10px 22px 10px;
+	}
+
+	.play h3 {
+		font-size: 18px;
+	}
+
+	.quebra cite {
+		margin-left: 200px;
+	}
+
+	/*footer */
+	.copy {
+		height: 80px;
+	}
+
+	/* about*/
+
+	.meteoros img {
+		margin-right: 150px;
+		margin-left: 0px;
+	}
+
+	.about p {
+		padding: 0px;
+	}
+
+	.about img {
+		margin-left: 10px auto;
+	}
+
+	.line-dash {
+		opacity: 0;
+		position: absolute;
+	}
+
+	.about {
+		padding-bottom: 20px;
+	}
+
+	.box-office img {
+		position: absolute;
+		margin-left: -150px;
+	}
+
+	.reviews {
+		height: 1350px;
+	}
+
+	.reviews p {
+		margin-left: 0px;
+	}
+
+	.making-off .imagens {
+		margin-left: 0px;
+	}
+
+	.about .quote cite {
+		padding-left: 100px;
+	}
+
+	/* Cast */
+
+	.titulo-interno {
+		margin-top: 0px;
+	}
+
+	.setas {
+		opacity: 0;
+		position: absolute;
+	}
+
+	.personagens {
+		margin-left: 10px;
+	}
+
+	/* History */
+
+	.synopsis p{
+		padding: 0px;
+		margin-bottom: 20px;
+	}
+
+	.plot {
+		height: 4000px;
+	}
+
+	.plot .subtitulo-interno {
+		color: white;
+		margin-top: 15px;
+	}
+
+	.plot p {
+		margin-left: 0px;
+	
+	}
+
+	.plot img {
+		padding: 20px;
+		margin: 0;
+	}
+
+	.trailer {
+		padding-bottom: 30px;
+	} 
+
+	.prime {
+		margin-left: 0px;
+	}
+
+	.prime-video h3:before {
+		background: url("../img/seta-menor.png") no-repeat center;
+		width: 74px;
+		height: 29px;
+		margin-top: -30px;
+		margin-left: 80px;
+		
+	}
+	.prime-video h3 {
+		font-size: 20px;
+		padding: 10px 0px 60px 10px;
+		border-radius: 10px;
+		margin: 0;
+
+	}
+
+	.prime-video h3:hover {
+		color: white;
+		background: #7FC0E4;
+		border: #002446 solid 3px;
+		padding: 10px 0px 60px 10px;
+	}
+
+	.prime-video {
+		margin-left: 0px;
+		padding: 0;
+	}
+
+	.watch {
+		padding-bottom: 30px;
+	}
+
+	.linha {
+		position: absolute;
+		opacity: 0;
+	}
+
+	.prime-video a {
+		margin: 20px;
+	}
+
+	/* Game */
+
+	.game img {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	.rules {
+		height: 1350px;
+	}
+
+	.rules h1 {
+		padding: 40px 0 30px 0;
+	}
+	
+	.rules ul, .img {
+		padding-top: 10px;
+	}
+	
+	.review {
+		margin-bottom: 50px;
+	}
+
+	.playstation {
+		height: 1150px;
+	}
+
+	.game-description {
+		padding: 0px;
+	}
+	
+	.game-description h2{
+		margin-left: 0px;
+		padding-top: 30px;
+	}
+
+	.texto {
+		padding-left: 0px;
+	}
+
+	.gameplay .play {
+		margin-top: -200px
+	}
+	
+	.game cite {
+		margin-left: 200px;
+	}
+
+	/* Production */
+
+
+	.top-linha {
+		margin-top: 180px;
+	}
+
+	.conteudo {
+		padding: 0;
+	}
+
+	.soundtrack span {
+		float: right;
+		margin: 10px 115px 0px 0px;
+	}
+
+	.script {
+		height: 1600px;
+		padding-top: 30px;
+	}
+
+	.camera {
+		padding: 20px 0px 0px 240px
+	}
+	
+	.direcao {
+		margin: 10px 0px 50px 150px;
+	}
+	
+	.direcao .textinho {
+		padding: 0;
+	}
+
+	.diretor {
+		padding-left: 0px;
+		padding-top: 20px;
+	}
+
+}
+
+
+/* --- JAVASCRIPT -----*/
+
+.js [data-slide] {
+    position: relative;
+}
+
+.js [data-slide] > * {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+}
+
+.js [data-slide] > .active {
+    position: relative;
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.js [data-anime] {
+    opacity: 0;
+}
+
+.js .fadeInDown {
+    transform: translated3d(0, -60px, 0);
+}
+
+.js .fadeInUp {
+    transform: translated3d(0, 60px, 0);
+}
+
+.js .anime {
+    opacity: 1;
+    transform: none;
+    transition: opacity 800ms, transform 800ms;
+}
+
